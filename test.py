@@ -9,7 +9,8 @@ writer = csv.writer(f)
 writer.writerow(['sortCode', 'accountNumber'])
 
 
-for _ in range(10):
+for _ in range(1000):
+    print(_)
     account = GenerateUkBankAccount().generate_for_sort_code(sort_code)
     writer.writerow([account.sort_code, account.account_numbers[0]])
 
