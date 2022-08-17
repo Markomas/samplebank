@@ -17,7 +17,11 @@ for _ in range(377000):
     account = GenerateUkBankAccount().generate_for_sort_code(sort_code)
     letters = string.ascii_lowercase
     start = ''.join(random.choice(letters) for i in range(10))
-    phone = '44020' + str(_).zfill(6) + '22'
+    
+    phone = '44075' + str(_).zfill(6) + '22'
+    if (_ % 5) == 0:
+        phone = '44020' + str(_).zfill(6) + '22'
+        
     writer.writerow([account.sort_code, account.account_numbers[0], start + '@legatio.test', phone, ccard.visa()])
 
 
