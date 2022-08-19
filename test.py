@@ -12,7 +12,7 @@ writer = csv.writer(f)
 writer.writerow(['sortCode', 'accountNumber', 'email', 'phone', 'ccard'])
 
 
-for _ in range(377000):
+for _ in range(377125):
     print(_)
     account = GenerateUkBankAccount().generate_for_sort_code(sort_code)
     letters = string.ascii_lowercase
